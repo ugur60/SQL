@@ -1,0 +1,12 @@
+--SORU-1- film tablosunda bulunan filmleri rating değerlerine göre gruplayınız.
+--SELECT title,rating FROM film GROUP BY rating,title ORDER BY rating DESC
+
+--SORU-2:film tablosunda bulunan filmleri replacement_cost sütununa göre grupladığımızda film sayısı 50 den fazla olan replacement_cost değerini ve karşılık gelen film sayısını sıralayınız.
+--Cevap-2: SELECT replacement_cost,count(film_id) from film GROUP BY replacement_cost HAVING count(film_id) >50
+
+--SORU-3: customer tablosunda bulunan store_id değerlerine karşılık gelen müşteri sayılarını nelerdir
+--SELECT  store_id, COUNT(customer_id) AS Müşteri_sayısı  FROM customer GROUP BY store_id
+
+--SORU-4: city tablosunda bulunan şehir verilerini country_id sütununa göre gruplandırdıktan sonra en fazla şehir sayısı barındıran country_id bilgisini ve şehir sayısını paylaşınız.
+--Cevap-4:SELECT country_id,COUNT(city) FROM city GROUP BY country_id ORDER BY COUNT(city) DESC LIMIT 1
+
