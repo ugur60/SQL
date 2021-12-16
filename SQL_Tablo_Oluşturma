@@ -1,0 +1,33 @@
+--CREATE TABLE [IF NOT EXISTS] table_name (
+--   column1 datatype(length) column_contraint,
+--   column2 datatype(length) column_contraint,
+--   column3 datatype(length) column_contraint,
+--   table_constraints
+--);
+---------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE author(
+	id SERIAL PRIMARY KEY,
+	first_name VARCHAR(50) NOT NULL,
+	last_name VARCHAR(50) NOT NULL,
+	email VARCHAR(40),
+	birthday DATE
+);
+
+--Tabloya veri ekleme!
+
+INSERT INTO author (first_name, last_name, email, birthday)
+VALUES
+	('Dale','Carniege', '','1990-01-01'),
+	('Ali','Gürbüz', 'ali@gürbüz.com','1992-01-01');
+	
+  
+ --Şablon olarak aynı olan bir tablo daha oluşturmak istediğimde.
+CREATE TABLE author2 (LIKE author);
+
+--Diğer tablodaki verilerden veri aktarımı
+INSERT INTO author2 SELECT * FROM author WHERE first_name='Ali'
+
+-- Tablo silebilmek için;
+DROP TABLE IF EXISTS author2
+
