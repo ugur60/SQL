@@ -1,0 +1,44 @@
+-- Hazır veri seti indirebilmek ve pgadmin'e atabilmek için "generate dummy data sql" mockaroo sitesinden hazır veriler oluşturulabilir. Sonrasında da veriler istenilen bir biçimde güncellenebilir.
+
+UPDATE <table_name>
+SET column1=value1,
+    column2=value2,
+    --------;
+    -> Yada bir koşula göre yapmak için, 
+WHERE condition; olarak yapılabilir.
+
+Örnek uygulama------------
+
+UPDATE author
+SET first_name = "Emrah Sefa",
+    last_name = " Gürkan ",
+    email = "emrah@gürkan.com,
+    birthday= "1980-01-01"
+WHERE id =10;
+
+UPDATE author 
+SET last_name = " UPDATE",
+WHERE firts_name = "Odetta",
+REETURNING *;
+
+------------Dosyalardan veri silmek---------------
+
+DELETE FROM <table_name>
+WHERE condıtıon
+
+Örnek:
+
+DELETE FROM author
+WHERE id=6;
+
+
+
+
+
+
+
+
+
+
+
+
