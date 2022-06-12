@@ -1,4 +1,4 @@
-1.  Yazarın ismi ve kitap isminin görünmesi istenmektedir.
+1. city tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
 Select cy.country, c.city from city c inner join country cy on c.country_id=cy.country_id Order By cy.country
 
 2.customer tablosu ile payment tablosunda bulunan payment_id ile   customer tablosundaki first_name ve last_name isimlerini birlikte    görebileceğimiz INNER JOIN sorgusunu yazınız.
