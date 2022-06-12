@@ -1,0 +1,11 @@
+1.  Yazarın ismi ve kitap isminin görünmesi istenmektedir.
+Select cy.country, c.city from city c inner join country cy on c.country_id=cy.country_id Order By cy.country
+
+2.customer tablosu ile payment tablosunda bulunan payment_id ile   customer tablosundaki first_name ve last_name isimlerini birlikte    görebileceğimiz INNER JOIN sorgusunu yazınız.
+select payment_id, first_name,last_name from customer C inner join payment P on C.customer_id=P.customer_id Order By payment_id
+
+3. customer tablosu ile rental tablosunda bulunan rental_id ile    customer tablosundaki first_name ve last_name isimlerini birlikte    görebileceğimiz INNER JOIN sorgusunu yazınız.
+select rental_id, first_name,last_name from customer C inner join rental R  on C.customer_id=R.customer_id Order By rental_id
+
+
+
