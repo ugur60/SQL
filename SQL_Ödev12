@@ -24,7 +24,10 @@ and replacement_cost=(select min(replacement_cost) from film)
 
 
 Soru 4: payment tablosunda en fazla sayıda alışveriş yapan müşterileri(customer) sıralayınız.
-
+Cevap:
+select c.customer_id,c.first_name,c.last_name from payment P inner join customer c
+on p.customer_id=c.customer_id
+where amount = (select Max(amount) from payment)
 
 
 
