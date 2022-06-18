@@ -1,0 +1,30 @@
+Soru 1: film tablosunda film uzunluğu length sütununda gösterilmektedir. Uzunluğu ortalama film uzunluğundan fazla kaç tane film vardır?
+Cevap:
+select count(*) from film 
+where length > 
+(
+select avg(length) as Ortalama_Film_Uzunluğu from film 
+)
+
+
+Soru 2: film tablosunda en yüksek rental_rate değerine sahip kaç tane film vardır?
+Cevap:
+select count(*) from film 
+where rental_rate =
+(
+select max(rental_rate) from  film
+)
+
+Soru 3: film tablosunda en düşük rental_rate ve en düşük replacement_cost değerlerine sahip filmleri sıralayınız.
+Cevap:
+
+Select * from Film
+Where rental_rate=(select min(rental_rate) from film)
+and replacement_cost=(select min(replacement_cost) from film)
+
+
+Soru 4: payment tablosunda en fazla sayıda alışveriş yapan müşterileri(customer) sıralayınız.
+
+
+
+
